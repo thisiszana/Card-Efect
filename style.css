@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #444444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    width: 1200px;
+}
+
+.container .card {
+    position: relative;
+    padding: 0 20px;
+}
+
+.container .card .card-content {
+    width: 300px;
+    height: 200px;
+    transition: all .3s ease-in;
+}
+
+.container .card .card-content.top-sec-card {
+    position: relative;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card:hover .card-content.top-sec-card {
+    transform: translateY(0);
+    box-shadow:
+        inset 0 0 60px whitesmoke,
+        inset 20px 0 80px #f0f,
+        inset -20px 0 80px #0ff,
+        inset 20px 0 300px #f0f,
+        inset -20px 0 300px #0ff,
+        0 0 50px #fff,
+        -10px 0 80px #f0f,
+        10px 0 80px #0ff;
+}
+
+.container .card .card-content.top-sec-card .content {
+    opacity: .2;
+    text-align: center;
+    transition: all .3s ease-in;
+    color: #ffffff;
+}
+
+.container .card:hover .card-content.top-sec-card .content {
+    opacity: 1;
+}
+
+.container .card .card-content.top-sec-card .content i {
+    display: inline-block;
+    font-size: 3rem;
+}
+
+.container .card .card-content.top-sec-card .content h3 {
+    font-size: 1rem;
+}
+
+.container .card .card-content.bottom-sec-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .8);
+    background-color: #f5f5f5;
+    transform: translateY(-100px);
+}
+
+.container .card:hover .card-content.bottom-sec-card {
+    transform: translateY(0);
+}
+
+.container .card .card-content.bottom-sec-card p,
+a {
+    font-size: 13px;
+    color: #333333;
+}
+
+.container .card .card-content.bottom-sec-card a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    outline: 1px dashed #333333;
+    margin: 15px 0 0;
+    padding: 10px;
+}
+
+.container .card .card-content.bottom-sec-card a:hover {
+    background-color: #333333;
+    color: #f5f5f5;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
